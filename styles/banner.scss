@@ -30,6 +30,7 @@
       flex-direction: column-reverse;
       // gap: 1rem;
     }
+    background-color: red;
   }
   &__left {
     @include flex($direction: column, $gap: 2.3rem, $alignItems: flex-start);
@@ -45,7 +46,6 @@
     margin-top: 5rem;
     color: white;
     &-top {
-      // margin: auto;
       // text-align: center;
       @include flex($direction: column, $gap: 1.3rem, $alignItems: flex-start);
       h1 {
@@ -105,6 +105,7 @@
     }
     right: 0;
     bottom: 0;
+    top: 0%;
     display: flex;
     padding: 1.2rem;
     &-gElement {
@@ -116,7 +117,7 @@
         max-height: 390px;
         translate: -89px 20px;
       }
-      translate: -120px 0;
+      translate: -130px 0;
       object-fit: contain;
     }
   }

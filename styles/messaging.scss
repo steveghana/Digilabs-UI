@@ -1,0 +1,22 @@
+/*======= Messaging-tabs ========*/
+@import "./_mixins.scss";
+.messaging {
+  &__container {
+    margin-top: 2rem;
+    @include flex($direction: column);
+  }
+  &__wrapper {
+    max-width: var(--maxWidth);
+    @include flex($direction: column, $gap: 3rem);
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  &__header {
+    text-align: center;
+  }
+  &__Tabs {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(min(100%, 150px), 1fr));
+  }
+}

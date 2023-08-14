@@ -15,7 +15,7 @@ import {
 import NavBar from "@/components/nav";
 export default function Home() {
   return (
-    <div style={{ width: "100vw", background: "red" }}>
+    <div style={{ width: "100vw" /*  background: "red" */ }}>
       <NavBar />
       <Banner />
       <Messaging />
