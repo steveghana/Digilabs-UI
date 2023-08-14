@@ -38,8 +38,11 @@
     &-link {
       color: var(--btn-blue);
       font-size: 13px;
+      @include flex();
     }
     &-icon {
+      @include flex();
+      padding: 0.3rem;
       border-radius: 50%;
       background-color: var(--btn-blue);
     }

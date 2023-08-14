@@ -1,17 +1,21 @@
+import Image, { StaticImageData } from "next/image";
 import React from "react";
-
-const MessagingTab: React.FC<{ head: string; icons: string; text: string }> = (
-  props
-) => {
+import { ArrowRightAlt } from "@mui/icons-material";
+const MessagingTab: React.FC<{
+  head: string;
+  icons: StaticImageData;
+  text: string;
+}> = (props) => {
   return (
     <div className="messaging__tab">
-      <div className="messaging__tab-icon"></div>
-      <h2>Easier Work Organization</h2>
-      <p>
-        Efficiently unleash cross-media information without cross-media value.
-        Quickly timely deliverables for real-time schemas.{" "}
-      </p>
-      <div className="messaging__tab-link">Learn more </div>
+      <div className="messaging__tab-icon">
+        <Image src={props.icons} alt="img" />
+      </div>
+      <h2>{props.head}</h2>
+      <p>{props.text}</p>
+      <div className="messaging__tab-link">
+        Learn more <ArrowRightAlt />{" "}
+      </div>
     </div>
   );
 };

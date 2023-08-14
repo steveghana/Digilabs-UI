@@ -1,5 +1,6 @@
 import React from "react";
 import MessagingTab from "@/widgets/messagingTabs";
+import { data } from "@/data/data";
 const Messaging = () => {
   return (
     <div className="messaging__container">
@@ -12,8 +13,13 @@ const Messaging = () => {
           </p>
         </div>
         <div className="messaging__Tabs">
-          {Array.from({ length: 8 }).map((_, itemIdx) => (
-            <MessagingTab icons="" head="" text="" key={itemIdx} />
+          {data.map((item) => (
+            <MessagingTab
+              icons={item.icons}
+              head={item.title}
+              text={item.description}
+              key={item.id}
+            />
           ))}
         </div>
       </div>
