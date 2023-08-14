@@ -13,7 +13,7 @@ const Messaging = () => {
         </div>
         <div className="messaging__Tabs">
           {Array.from({ length: 8 }).map((_, itemIdx) => (
-            <MessagingTab head="" text="" key={itemIdx} />
+            <MessagingTab icons="" head="" text="" key={itemIdx} />
           ))}
         </div>
       </div>
