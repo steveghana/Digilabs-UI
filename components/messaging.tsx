@@ -1,19 +1,19 @@
 import React from "react";
 import MessagingTab from "@/widgets/messagingTabs";
-import { data } from "@/data/data";
+import { messagedata } from "@/data/data";
+import HeaderDescription from "@/widgets/header-Description";
 const Messaging = () => {
   return (
     <div className="messaging__container">
       <div className="messaging__wrapper">
-        <div className="messaging__header">
-          <h1>Message for all</h1>
-          <p>
-            User generated content in real-time will have multiple touchpoints
-            for offshoring
-          </p>
-        </div>
+        <HeaderDescription
+          classname="messaging__header"
+          header="Message for all"
+          description="   User generated content in real-time will have multiple touchpoints
+            for offshoring"
+        />
         <div className="messaging__Tabs">
-          {data.map((item) => (
+          {messagedata.map((item) => (
             <MessagingTab
               icons={item.icons}
               head={item.title}
