@@ -16,8 +16,6 @@
 }
 //========== TYPOGRAPHY ==========
 
-html,
-body,
 main,
 div,
 span,
@@ -36,5 +34,5 @@ body {
   // -moz-osx-font-smoothing: grayscale;
   // background-color: var(--grayish-blue);
   // position: relative;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }

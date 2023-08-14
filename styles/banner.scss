@@ -26,9 +26,9 @@
     margin: 0 auto;
     padding-left: 2rem;
     @include respond(tablet-portrait) {
-      padding: 1rem;
+      // padding: 1rem;
       flex-direction: column-reverse;
-      gap: 1rem;
+      // gap: 1rem;
     }
   }
   &__left {
@@ -55,7 +55,7 @@
       p {
         color: #b1ccfb;
         font-size: smaller;
-        padding: 0 3rem;
+        // padding: 0 3rem 0 0;
       }
       button {
         background-color: var(--btn-blue);
@@ -79,6 +79,9 @@
       }
       div {
         @include flex($gap: 2rem);
+        @include respond(tablet-portrait) {
+          flex-wrap: wrap;
+        }
       }
       @include respond(tablet-portrait) {
         text-align: center;
@@ -89,20 +92,29 @@
   &__right {
     background-color: var(--btn-blue);
     z-index: 1;
-    height: 100%;
+    position: absolute;
+    // height: 100%;
     @include respond(tablet-portrait) {
       position: relative;
       margin-left: auto;
     }
+    @include respond(mobile) {
+      translate: 50px 0;
+      // width: 70vw;
+      // margin: auto;
+    }
     right: 0;
+    bottom: 0;
     display: flex;
     padding: 1.2rem;
     &-gElement {
       margin: auto;
-      max-width: 400px;
-      min-width: 100px;
+      // max-width: 400px;
+      // min-width: 100px;
       @include respond(small-tablet) {
-        translate: -0px 20px;
+        max-width: 280px;
+        max-height: 390px;
+        translate: -89px 20px;
       }
       translate: -120px 0;
       object-fit: contain;
